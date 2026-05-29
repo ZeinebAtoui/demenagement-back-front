@@ -1,4 +1,4 @@
-# DemenagementBackFront
+# demenagement-back-front
  #  Plateforme de Réservation de Déménagements
 
 Ce projet est une application web Fullstack permettant la gestion et la réservation de services de déménagement. 
@@ -19,40 +19,91 @@ Ce projet est une application web Fullstack permettant la gestion et la réserva
 - **Base de données** : MySQL
 
 ### Frontend
-- **Framework** : Angular
-- **Langage** : TypeScript
-- **Architecture** : MVC (Model-View-Controller)
+- Framework: Angular
+- Langage : TypeScript
+- Architecture : MVC (Model-View-Controller)
 
 ## Structure du Projet
 
 Le projet est divisé en deux parties principales : le Backend (Spring Boot) et le Frontend (Angular).
 
-###  Backend (Spring Boot)
+ |-- DemenagementBackFront-main
+    |-- client
+      |-- .vscode
+      |-- src
+        |-- app
+          |-- admin
+            |-- acceuil
+            |-- add-camion
+            |-- add-chauffeur
+            |-- assigner-chauffeur
+            |-- detail-chauffeur
+            |-- list-camion
+            |-- list-chauffeur
+            |-- list-client
+            |-- list-demenagement
+          |-- auth
+            |-- sign-in
+            |-- sign-up
+          |-- chauffeur
+            |-- list-demenagement
+          |-- client
+            |-- add-demenagement
+            |-- list-demenagement
+          |-- error
+            |-- forbiden
+          |-- guards
+          |-- interceptor
+          |-- layout
+            |-- admin-layout
+            |-- auth-layout
+            |-- chauffeur-layout
+            |-- client-layout
+            |-- error-layout
+            |-- main-layout
+          |-- main
+            |-- home
+          |-- models
+          |-- services
+          |-- shared
+            |-- navbar
+            |-- sidebar
+        |-- assets
+          |-- homeimg
+          |-- images
+        |-- environments
+    |-- ProjectDemenagment
+      |-- .mvn
+        |-- wrapper
+      |-- src
+        |-- main
+          |-- java
+            |-- com
+              |-- example
+                |-- ProjectDemenagment
+                  |-- config
+                  |-- contollers
+                  |-- DTOs
+                    |-- request
+                    |-- response
+                  |-- exceptions
+                  |-- models
+                  |-- repositories
+                  |-- securities
+                    |-- jwt
+                    |-- services
+                  |-- services
+                  |-- utils
+          |-- resources
+            |-- templates
+        |-- test
+          |-- java
+            |-- com
+              |-- example
+                |-- ProjectDemenagment
 
-src/main/java/com/project/demenagement/
-├── config/             # Configuration Spring Security & CORS
-├── controller/         # Points d'entrée de l'API (REST Controllers)
-├── dto/                # Objets de transfert de données (Request/Response)
-├── entity/             # Modèles de données (JPA/Hibernate Entities)
-├── repository/         # Interfaces pour l'accès à la base de données
-├── service/            # Logique métier du projet
-└── security/           # Configuration JWT, Filtres et UserDetailsService
-    ├── jwt/            # Logique de génération et validation des tokens
-    └── services/       # Implémentation de la sécurité utilisateur
-
-src/main/resources/
-└── application.properties # Configuration MySQL, Port et Clé JWT
-### Frontend
 
 
-src/app/
-├── components/         # Composants UI (Login, Reservation, Home, etc.)
-├── services/           # Services pour les appels API vers le Backend
-├── models/             # Interfaces TypeScript (User, Reservation)
-├── guards/             # Protections de routes (AuthGuard)
-├── interceptors/       # Intercepteur JWT pour ajouter le Token aux requêtes
-├── app-routing.module.ts # Configuration des routes de l'application
-└── app.component.html  # Structure principale de l'interface
 
 
 ##  Installation et Utilisation
