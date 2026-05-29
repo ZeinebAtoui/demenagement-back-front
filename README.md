@@ -1,7 +1,7 @@
 # DemenagementBackFront
  #  Plateforme de Réservation de Déménagements
 
-Ce projet est une application web Fullstack permettant la gestion et la réservation de services de déménagement. Il a été réalisé entre juin et juillet 2024.
+Ce projet est une application web Fullstack permettant la gestion et la réservation de services de déménagement. 
 
 ##  Fonctionnalités clés
 - **Authentification Sécurisée** : Mise en place de Spring Security avec authentification par Token **JWT**.
@@ -22,6 +22,38 @@ Ce projet est une application web Fullstack permettant la gestion et la réserva
 - **Framework** : Angular
 - **Langage** : TypeScript
 - **Architecture** : MVC (Model-View-Controller)
+
+## Structure du Projet
+
+Le projet est divisé en deux parties principales : le Backend (Spring Boot) et le Frontend (Angular).
+
+###  Backend (Spring Boot)
+
+src/main/java/com/project/demenagement/
+├── config/             # Configuration Spring Security & CORS
+├── controller/         # Points d'entrée de l'API (REST Controllers)
+├── dto/                # Objets de transfert de données (Request/Response)
+├── entity/             # Modèles de données (JPA/Hibernate Entities)
+├── repository/         # Interfaces pour l'accès à la base de données
+├── service/            # Logique métier du projet
+└── security/           # Configuration JWT, Filtres et UserDetailsService
+    ├── jwt/            # Logique de génération et validation des tokens
+    └── services/       # Implémentation de la sécurité utilisateur
+
+src/main/resources/
+└── application.properties # Configuration MySQL, Port et Clé JWT
+### Frontend
+
+
+src/app/
+├── components/         # Composants UI (Login, Reservation, Home, etc.)
+├── services/           # Services pour les appels API vers le Backend
+├── models/             # Interfaces TypeScript (User, Reservation)
+├── guards/             # Protections de routes (AuthGuard)
+├── interceptors/       # Intercepteur JWT pour ajouter le Token aux requêtes
+├── app-routing.module.ts # Configuration des routes de l'application
+└── app.component.html  # Structure principale de l'interface
+
 
 ##  Installation et Utilisation
 1. Clonez le dépôt : `git clone https://github.com/ZeinebAtoui/demenagement-back-front.git`
