@@ -26,6 +26,7 @@ Ce projet est une application web Fullstack permettant la gestion et la réserva
 ## Structure du Projet
 
 Le projet est divisé en deux parties principales : le Backend (Spring Boot) et le Frontend (Angular).
+```text
 
  |-- DemenagementBackFront-main
     |-- client
